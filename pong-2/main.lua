@@ -16,7 +16,7 @@
 
     This version is built to more closely resemble the NES than
     the original Pong machines or the Atari 2600 in terms of
-    resolution, though in widescreen (16:9) so it looks nicer on 
+    resolution, though in widescreen (16:9) so it looks nicer on
     modern systems.
 ]]
 
@@ -43,7 +43,7 @@ function love.load()
     smallFont = love.graphics.newFont('font.ttf', 8)
 
     -- set LÖVE2D's active font to the smallFont obect
-    love.graphics.setFont(smallFont)
+    -- love.graphics.setFont(smallFont)
 
     -- initialize window with virtual resolution
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
@@ -54,7 +54,7 @@ function love.load()
 end
 
 --[[
-    Keyboard handling, called by LÖVE2D each frame; 
+    Keyboard handling, called by LÖVE2D each frame;
     passes in the key we pressed so we can access.
 ]]
 function love.keypressed(key)
@@ -66,7 +66,7 @@ function love.keypressed(key)
 end
 
 --[[
-    Called after update by LÖVE2D, used to draw anything to the screen, 
+    Called after update by LÖVE2D, used to draw anything to the screen,
     updated or otherwise.
 ]]
 function love.draw()
@@ -75,7 +75,7 @@ function love.draw()
 
     -- clear the screen with a specific color; in this case, a color similar
     -- to some versions of the original Pong
-    love.graphics.clear(40, 45, 52, 255)
+    -- love.graphics.clear(40, 45, 52, 255)
 
     -- draw welcome text toward the top of the screen
     love.graphics.printf('Hello Pong!', 0, 20, VIRTUAL_WIDTH, 'center')

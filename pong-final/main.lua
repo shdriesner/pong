@@ -70,7 +70,7 @@ function love.load()
     smallFont = love.graphics.newFont('font.ttf', 8)
     largeFont = love.graphics.newFont('font.ttf', 16)
     scoreFont = love.graphics.newFont('font.ttf', 32)
-    love.graphics.setFont(smallFont)
+    -- love.graphics.setFont(smallFont)
 
     -- set up our sound effects; later, we can just index this table and
     -- call each entry's `play` method
@@ -302,17 +302,17 @@ function love.draw()
     -- begin drawing with push, in our virtual resolution
     push:apply('start')
 
-    love.graphics.clear(40, 45, 52, 255)
+    -- love.graphics.clear(40, 45, 52, 255)
     
     -- render different things depending on which part of the game we're in
     if gameState == 'start' then
         -- UI messages
-        love.graphics.setFont(smallFont)
+        -- love.graphics.setFont(smallFont)
         love.graphics.printf('Welcome to Pong!', 0, 10, VIRTUAL_WIDTH, 'center')
         love.graphics.printf('Press Enter to begin!', 0, 20, VIRTUAL_WIDTH, 'center')
     elseif gameState == 'serve' then
         -- UI messages
-        love.graphics.setFont(smallFont)
+        -- love.graphics.setFont(smallFont)
         love.graphics.printf('Player ' .. tostring(servingPlayer) .. "'s serve!", 
             0, 10, VIRTUAL_WIDTH, 'center')
         love.graphics.printf('Press Enter to serve!', 0, 20, VIRTUAL_WIDTH, 'center')
@@ -320,10 +320,10 @@ function love.draw()
         -- no UI messages to display in play
     elseif gameState == 'done' then
         -- UI messages
-        love.graphics.setFont(largeFont)
+        -- love.graphics.setFont(largeFont)
         love.graphics.printf('Player ' .. tostring(winningPlayer) .. ' wins!',
             0, 10, VIRTUAL_WIDTH, 'center')
-        love.graphics.setFont(smallFont)
+        -- love.graphics.setFont(smallFont)
         love.graphics.printf('Press Enter to restart!', 0, 30, VIRTUAL_WIDTH, 'center')
     end
 
@@ -346,7 +346,7 @@ end
 ]]
 function displayScore()
     -- score display
-    love.graphics.setFont(scoreFont)
+    -- love.graphics.setFont(scoreFont)
     love.graphics.print(tostring(player1Score), VIRTUAL_WIDTH / 2 - 50,
         VIRTUAL_HEIGHT / 3)
     love.graphics.print(tostring(player2Score), VIRTUAL_WIDTH / 2 + 30,
@@ -358,7 +358,7 @@ end
 ]]
 function displayFPS()
     -- simple FPS display across all states
-    love.graphics.setFont(smallFont)
+    -- love.graphics.setFont(smallFont)
     love.graphics.setColor(0, 255, 0, 255)
     love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10)
 end

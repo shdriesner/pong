@@ -65,7 +65,7 @@ function love.load()
     smallFont = love.graphics.newFont('font.ttf', 8)
 
     -- set LÖVE2D's active font to the smallFont object
-    love.graphics.setFont(smallFont)
+    -- love.graphics.setFont(smallFont)
 
     -- initialize window with virtual resolution
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
@@ -154,10 +154,10 @@ function love.draw()
 
     -- clear the screen with a specific color; in this case, a color similar
     -- to some versions of the original Pong
-    love.graphics.clear(40, 45, 52, 255)
+    -- love.graphics.clear(40, 45, 52, 255)
 
     -- draw different things based on the state of the game
-    love.graphics.setFont(smallFont)
+    -- love.graphics.setFont(smallFont)
 
     if gameState == 'start' then
         love.graphics.printf('Hello Start State!', 0, 20, VIRTUAL_WIDTH, 'center')
